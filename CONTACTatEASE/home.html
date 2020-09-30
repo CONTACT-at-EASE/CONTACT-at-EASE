@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT at EASE</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+    /* CSS Reset */
+    
+    @-webkit-keyframes tracking-in-expand {
+        0% {
+            letter-spacing: -0.5em;
+            opacity: 0;
+        }
+        40% {
+            opacity: 0.6;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes tracking-in-expand {
+        0% {
+            letter-spacing: -0.5em;
+            opacity: 0;
+        }
+        40% {
+            opacity: 0.6;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @-webkit-keyframes shadow-pop-tr {
+        0% {
+            -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+            box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+            -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+        }
+        100% {
+            -webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+            box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+            -webkit-transform: translateX(-8px) translateY(8px);
+            transform: translateX(-8px) translateY(8px);
+        }
+    }
+    
+    @keyframes shadow-pop-tr {
+        0% {
+            -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+            box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+            -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+        }
+        100% {
+            -webkit-box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+            box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+            -webkit-transform: translateX(-8px) translateY(8px);
+            transform: translateX(-8px) translateY(8px);
+        }
+    }
+    
+    @-webkit-keyframes bg-pan-bottom {
+        0% {
+            background-position: 50% 0%;
+        }
+        100% {
+            background-position: 50% 100%;
+        }
+    }
+    
+    @keyframes bg-pan-bottom {
+        0% {
+            background-position: 50% 0%;
+        }
+        100% {
+            background-position: 50% 100%;
+        }
+    }
+    
+    body {
+        font-family: 'Noto Sans', sans-serif;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        -webkit-animation: bg-pan-bottom 8s both;
+        animation: bg-pan-bottom 8s both;
+    }
+    
+    .left {
+        display: inline-block;
+        /* border: 2px solid red; */
+        position: absolute;
+        left: 60px;
+        top: 20px;
+        z-index: 2;
+    }
+    
+    #logo {
+        position: absolute;
+        width: 42px;
+        height: 71px;
+        left: 64px;
+        top: 16px;
+        z-index: 2;
+        overflow: visible;
+    }
+    
+    #back {
+        filter: blur(5px);
+        position: absolute;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        left: 0px;
+        top: 0px;
+        overflow: visible;
+    }
+    
+    .left h3 {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+        left: 49px;
+        top: 12px;
+        position: absolute;
+        overflow: visible;
+        width: 178px;
+        white-space: nowrap;
+        line-height: 26px;
+        margin-top: -5px;
+        text-align: left;
+        font-family: 'Noto Sans', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        color: rgba(61, 61, 61, 1);
+        -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
+    
+    .left div {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+        left: 50px;
+        top: 38px;
+        position: absolute;
+        overflow: visible;
+        width: 178px;
+        white-space: nowrap;
+        line-height: 26px;
+        margin-top: -5px;
+        text-align: left;
+        font-family: 'Noto Sans', sans-serif;
+        color: rgba(61, 61, 61, 1);
+        -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
+    
+    .mid {
+        z-index: 2;
+        width: 178px;
+        text-align: left;
+        width: 75px;
+        white-space: nowrap;
+        font-family: 'Noto Sans', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        color: #3d3d3d;
+        position: absolute;
+        height: 43px;
+        left: 671px;
+        top: 13px;
+        overflow: visible;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+    }
+    
+    .right {
+        z-index: 2;
+        position: absolute;
+        right: 34px;
+        top: 43px;
+        display: inline-block;
+        /* border: 2px solid yellow; */
+    }
+    
+    .navbar ul {
+        margin: 150px auto 0;
+        padding: 0;
+        list-style: none;
+        display: table;
+        width: 600px;
+        text-align: center;
+    }
+    
+    .navbar li {
+        display: table-cell;
+        position: relative;
+        padding: 15px 0;
+    }
+    
+    .navbar li a {
+        color: rgb(5, 5, 5);
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.15em;
+        display: inline-block;
+        padding: 15px 20px;
+        position: relative;
+    }
+    
+    .navbar li a:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #fff;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+    
+    .navbar li a:hover::after,
+    .navbar li a.active {
+        width: 100%;
+        left: 0;
+    }
+    
+    #login {
+        margin: 0px 9px;
+        padding: 4px 14px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 1px;
+        text-align: center;
+        font: normal normal 600 13px/22px 'Noto Sans', sans-serif;
+        letter-spacing: 0px;
+        color: #3E3E3E;
+        top: 41px;
+        left: 927px;
+        width: 144px;
+        height: 48px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #3E3E3E;
+        opacity: 1;
+    }
+    
+    #signup {
+        font-family: 'Baloo Bhai', cursive;
+        margin: 0px 9px;
+        background-color: black;
+        padding: 4px 14px;
+        border: 2px solid grey;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 1px;
+        text-align: center;
+        font: normal normal 600 13px/22px Noto Sans;
+        letter-spacing: 0px;
+        color: #FCFCFC;
+        opacity: 1;
+        top: 41px;
+        left: 1090px;
+        width: 144px;
+        height: 48px;
+        background: #3C3C3C 0% 0% no-repeat padding-box;
+    }
+    
+    #login:hover {
+        background-color: #fcfcfc;
+        color: #3c3c3c;
+        -webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+        animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    }
+    
+    #signup:hover {
+        background-color: #fcfcfc;
+        color: #3c3c3c;
+        -webkit-animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+        animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    }
+    
+    #about {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+        overflow: visible;
+        width: 56px;
+        white-space: nowrap;
+        line-height: 22px;
+        margin-top: -3px;
+        font-family: 'Noto Sans', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        top: 252px;
+        left: 598px;
+        width: 254px;
+        font: normal normal bold 56px/66px Noto Sans;
+        letter-spacing: 0px;
+        color: #3C3C3C;
+        opacity: 1;
+        z-index: 2;
+        position: absolute;
+        height: 2565px;
+        overflow: hidden;
+    }
+    
+    #description {
+        position: absolute;
+        overflow: visible;
+        text-align: center;
+        font-weight: bold;
+        top: 352px;
+        left: 449px;
+        width: 560px;
+        height: 48px;
+        font: normal normal 600 18px/24px Noto Sans;
+        letter-spacing: 0px;
+        color: #3D3D3D;
+        opacity: 1;
+    }
+    
+    #mission {
+        height: 65px;
+        font: normal normal bold 48px/58px Noto Sans;
+        letter-spacing: 0px;
+        opacity: 1;
+        left: 145px;
+        top: 765px;
+        position: absolute;
+        overflow: visible;
+        width: 289px;
+        white-space: nowrap;
+        line-height: 58px;
+        margin-top: -5px;
+        text-align: left;
+        font-family: Noto Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        color: rgba(61, 61, 61, 1);
+    }
+    
+    #proinfo {
+        top: 854px;
+        font: normal normal 16px/26px Noto Sans;
+        letter-spacing: 0px;
+        opacity: 1;
+        left: 145px;
+        position: absolute;
+        overflow: visible;
+        width: 436px;
+        height: 152px;
+        line-height: 26px;
+        margin-top: -5px;
+        text-align: left;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        color: rgba(115, 115, 115, 1);
+    }
+    
+    #imgany {
+        position: absolute;
+        width: 583px;
+        height: 253px;
+        left: 707px;
+        top: 883px;
+        overflow: visible;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <img id="logo" src="img/Picture.png" alt="">
+        <img id="back" src="img/rashtra.jpg" alt="">
+        <!-- Left box for logo -->
+        <div class="left">
+
+            <h3>CONTACT at EASE </h3>
+            <div>Centralized Public Grievance</div>
+        </div>
+        <!-- Mid box for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Solutions</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Right box for buttons -->
+        <div class="right">
+            <button class="btn" id="login">Log in</button>
+            <button class="btn" id="signup">Get Started</button>
+        </div>
+    </header>
+    <div id="about">
+        <span>About Us</span>
+    </div>
+    <div id="description"> <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi sed excepturi quaerat
+            impedit molestiae dicta
+            a repudiandae eum veniam, quidem iusto necessitatibus maxime porro, officia adipisci vero deleniti eveniet,
+            consectetur provident reprehenderit.</span>
+    </div>
+    <div id="mission">
+        <span>
+            The Project
+        </span>
+    </div>
+    <div id="proinfo">
+        <span>The project is based on constructing a web portal for registering any complaints or problems from our
+            region which is mainly solved by the government bodies and agencies. If we have any problem that the
+            government requires to deal with them. Thus, we can search in the portal for the problem and the portal will
+            recommend us with the concerned divisions to whom we should approach. It will also have us updated with the
+            solved issues from our region. If the problem is not dealt with the charge can be sent to the higher
+            authorities of the respective divisions. after they deal with the problem an individual can provide
+            evaluation and ratings of the job performed by the officials.</span>
+    </div>
+    <div>
+        <img id="imgany" src="img\ANY-GRIEVANCE-PLEASE.png" alt="">
+    </div>
+
+</html>

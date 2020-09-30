@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After Login</title>
+</head>
+<style>
+    #header {
+        z-index: 2;
+        position: absolute;
+        width: 100%;
+        height: 120px;
+        left: 0px;
+        top: 0px;
+        overflow: visible;
+    }
+    
+    .Background_i {
+        z-index: 2;
+        position: absolute;
+        overflow: visible;
+        width: 100%;
+        height: 120px;
+        left: 0px;
+        top: 0px;
+    }
+    
+    #Background_i {
+        fill: rgba(251, 251, 251, 1);
+    }
+    
+    #logo {
+        z-index: 2;
+        position: absolute;
+        overflow: visible;
+        top: 25px;
+        left: 671px;
+        width: 42px;
+        height: 71px;
+        opacity: 1;
+        align-items: center;
+    }
+    
+    #title {
+        z-index: 2;
+        position: absolute;
+        overflow: visible;
+        white-space: nowrap;
+        line-height: 26px;
+        margin-top: -5px;
+        text-align: left;
+        font-style: normal;
+        font-weight: bold;
+        color: rgba(61, 61, 61, 1);
+        top: 39px;
+        left: 718px;
+        width: 137px;
+        height: 22px;
+        font: normal normal bold 16px/26px Noto Sans;
+    }
+    
+    .mid {
+        z-index: 2;
+        width: 178px;
+        text-align: left;
+        width: 75px;
+        white-space: nowrap;
+        font-family: 'Noto Sans', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        color: #3d3d3d;
+        position: absolute;
+        height: 43px;
+        left: 0px;
+        top: 13px;
+        overflow: visible;
+        padding: 0;
+        box-sizing: border-box;
+        border: none;
+    }
+    
+    .navbar ul {
+        margin: 150px auto 0;
+        padding: 0;
+        list-style: none;
+        display: table;
+        width: 600px;
+        text-align: center;
+    }
+    
+    .navbar li {
+        display: table-cell;
+        position: relative;
+        padding: 15px 0;
+    }
+    
+    .navbar li a {
+        color: rgb(5, 5, 5);
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.15em;
+        display: inline-block;
+        padding: 15px 20px;
+        position: relative;
+    }
+    
+    .navbar li a:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: rgb(5, 5, 5);
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+    
+    .navbar li a:hover::after,
+    .navbar li a.active {
+        width: 100%;
+        left: 0;
+    }
+    
+    #parliament {
+        z-index: 1;
+        opacity: 0.77;
+        filter: blur(6px);
+        position: absolute;
+        width: 100%;
+        min-width: 900px;
+        height: auto;
+        left: 0px;
+        top: 0px;
+        overflow: visible;
+    }
+    
+    #register {
+        z-index: 2;
+        mix-blend-mode: multiply;
+        position: absolute;
+        overflow: visible;
+        top: 284px;
+        left: 17px;
+        width: 165px;
+        height: 171px;
+    }
+    
+    #pending {
+        z-index: 2;
+        mix-blend-mode: multiply;
+        position: absolute;
+        overflow: visible;
+        top: 284px;
+        left: 501px;
+        width: 165px;
+        height: 171px;
+    }
+    
+    #closed {
+        z-index: 2;
+        mix-blend-mode: multiply;
+        position: absolute;
+        width: 197px;
+        height: 186px;
+        left: 943px;
+        top: 37px;
+        overflow: visible;
+        top: 284px;
+        left: 960px;
+        width: 165px;
+        height: 171px;
+    }
+</style>
+
+<body>
+    <div id="header">
+        <svg class="Background_i">
+        <rect id="Background_i" rx="0" ry="0" x="0" y="0" width="100%" height="120" viewBox="0 0 194 186" preserveAspectRatio="none">
+        </rect>
+    </svg>
+    </div>
+    <div>
+        <div id="title">
+            <span>CONTACT at EASE</span>
+            <br>
+            <span style="font-style:normal;font-weight:normal;font-size:13px;">Centralized Public Grievance</span>
+        </div>
+        <img id="logo" src="img/Picture.png" alt="">
+    </div>
+    <div class="mid">
+        <ul class="navbar">
+            <li><a href="#">home</a></li>
+            <li><a href="#">lodge grievance</a></li>
+            <li><a href="#">dashboard</a></li>
+        </ul>
+    </div>
+    <img src="img/parliament.jpeg" alt="" id="parliament">
+    <div id="g1">
+        <img src="img/file.png" alt="" id="register">
+        <img src="img/pending.png" alt="" id="pending">
+        <img src="img/closed.png" alt="" id="closed">
+    </div>
+
+</body>
+
+</html>
